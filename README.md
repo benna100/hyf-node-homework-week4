@@ -1,22 +1,20 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Meal sharing</h3>
 
 <div align="center">
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Website for sharing meals together. Invite your best friends or your family for dinner!
     <br> 
 </p>
 
@@ -32,54 +30,55 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-Write about 1-2 paragraphs describing the purpose of your project.
+This project is an exercise for HackYourFuture students to learn the concepts of full stack development with a focus on the connection between:
+
+Database <--> Webserver <--> Frontend
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+The homework for week4 should be made in a standalone repo on your github profile, so you can show it friends/new employeers/headhunters etc. 
+
+Here are the steps to do that:
+
+1. Create a new repository on your github profile. 
+2. Clone that repository down locally. 
+3. Copy the code for the template from the this folder into the newly created repo. 
+4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `client` folder in the `src` folder.
+5. Uncomment the lines that is for week4!
+6. Add, commit and push the changes to your github.
+7. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
+8. Thats it 🎉
+
+
+### Access server api
+To access the server api, use `localhost:3000/api`
+
+The traffic is being redirected (proxied) from `localhiost:5000` where the server is running to `localhost:3000/api`. You can see that in the `webpack.config.js` file line 41. 
+
+### Environment variables
+All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure. 
+
+In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
+
+The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/serverdatabase.js` file. 
 
 ### Prerequisites
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+- Postman
+- MySQL Workbench
+- [A heroku user](https://heroku.com) 
 
 ### Installing
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-
-End with an example of getting some data out of the system or using it for a little demo.
+To install run `npm install`
 
 ## 🎈 Usage <a name="usage"></a>
-Add notes about how to use the system.
+To run `npm run dev`
 
 ## 🚀 Deployment <a name = "deployment"></a>
-Add additional notes about how to deploy this on a live system.
+Set Heroku with automated builds to the master branch.  push your code to the `master` branch. 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
-- [MongoDB](https://www.mongodb.com/) - Database
+- [Mysql](https://www.npmjs.com/package/mysql) - Database
 - [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [@benna100](https://github.com/benna100) - Idea & Initial work
